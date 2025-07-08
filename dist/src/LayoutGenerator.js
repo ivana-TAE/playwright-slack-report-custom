@@ -31,7 +31,7 @@ const generateBlocks = async (summaryResults, maxNumberOfFailures) => {
             });
         }
     }
-    return [header, summary, ...meta, ...fails];
+    return [header, summary];
 };
 exports.generateBlocks = generateBlocks;
 const generateFailures = async (summaryResults, maxNumberOfFailures) => {
