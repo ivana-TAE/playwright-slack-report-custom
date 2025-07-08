@@ -39,7 +39,7 @@ const generateBlocks = async (
     }
   }
 
-  return [header, summary, ...meta, ...fails];
+  return [header, summary];
 };
 
 const generateFailures = async (
