@@ -8,10 +8,9 @@ const generateBlocks = async (
   const meta = [];
   const header = {
     type: 'section',
-    text: {
-      type: 'mrkdwn',
-      text: '🎭 *Playwright Results*',
-    },
+    text: summaryResults.failed > 0
+      ? '🚨 *Playwright Results – FAILURES DETECTED!* 🚨'
+      : '🎭 *Playwright Results*',
   };
   const summary = {
     type: 'section',
