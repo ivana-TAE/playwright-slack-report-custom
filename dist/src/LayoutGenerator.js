@@ -5,9 +5,12 @@ const generateBlocks = async (summaryResults, maxNumberOfFailures) => {
     const meta = [];
     const header = {
         type: 'section',
-        text: summaryResults.failed > 0
-            ? '🚨 *Playwright Results – FAILURES DETECTED!* 🚨'
-            : '🎭 *Playwright Results*',
+        text: {
+            type: 'mrkdwn',
+            text: summaryResults.failed > 0
+                ? '🚨 *Playwright Results – FAILURES DETECTED!* 🚨'
+                : '🎭 *Playwright Results*',
+        },
     };
     const summary = {
         type: 'section',
