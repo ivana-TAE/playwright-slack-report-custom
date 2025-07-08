@@ -42,7 +42,7 @@ const generateBlocks = async (
     }
   }
 
-  return [header, summary];
+  return [header, summary, ...meta, ...fails];
 };
 
 const generateFailures = async (
